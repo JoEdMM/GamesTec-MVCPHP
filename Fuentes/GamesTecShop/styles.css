@@ -1,0 +1,1076 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+}
+
+header {
+    background: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 50px;
+    margin-right: 15px;
+}
+
+.logo-container h1 {
+    font-size: 24px;
+}
+
+nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+/* Asegura que html y body ocupen todo el alto */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* El contenido principal debe expandirse para empujar el footer */
+main {
+    flex: 1;
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    animation: slide 200s infinite;
+    height: 100%;
+}
+
+.slides img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.centro-container {
+    padding: 5em;
+    background-color: rgba(0,0,0,0.5);
+    
+}
+
+.overlay h2 {
+    font-size: 36px;
+    color: #fff;
+}
+
+.overlay p {
+    padding-top: 2em;
+    font-size: 15px;
+    color: #fff;
+}
+
+@keyframes slide {
+    0%   { transform: translateX(0%); }
+    33%  { transform: translateX(-100%); }
+    66%  { transform: translateX(-200%); }
+    100% { transform: translateX(0%); }
+}
+
+footer {
+    background: #222;
+    padding: 20px;
+    text-align: center;
+    
+
+    
+}
+footer .social{
+    
+    
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+footer .social a {
+    color: orange;
+    text-decoration: none;
+    margin: 0 10px;
+
+}
+
+footer p {
+    padding-top: 1;
+    margin-top: 10px;
+    color: #bbb;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - Acceso - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    En este apartado se definen los estilos para los archivos login y registro
+*/
+
+.form-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    padding: 40px 20px;
+    
+}
+
+.auth-form {
+    background: #222;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 400px;
+    color: #fff;
+    
+}
+
+.auth-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: #333;
+    color: #fff;
+}
+
+.auth-form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: orange;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.auth-form input[type="submit"]:hover {
+    background: rgba(255, 166, 0, 0.438);
+}
+
+.auth-form p {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.auth-form a {
+    color: #00c3ff;
+    text-decoration: none;
+}
+
+.auth-form a:hover{
+    color: #a4deec;
+    text-decoration: none;
+}
+
+/*
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - Pagina principal - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    En este apartado se definen los estilos para los archivos login y registro
+*/
+
+/* Estilo del contenedor */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Botón */
+  .dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 40px;
+    display: inline-block;
+
+  }
+  
+  /* Contenido oculto por defecto */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  /* Mostrar el menú si el checkbox está marcado */
+  #menu-toggle:checked + label + .dropdown-content {
+    display: block;
+    line-height: 1.5em;
+    
+  }
+  
+  /* Enlaces del menú */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 0;
+    padding-right: 16px;
+    text-decoration: none;
+    display: block;
+    
+  }
+  
+  /* Estilo al pasar el mouse */
+  .dropdown-content a:hover {
+    background-color: white;
+  }
+  
+  /*
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  - - - - - - - - - - - - Pagina principal - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - CATEGORIAS - - - - - - - - - - - - - - - -    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  
+      En este apartado se definen los estilos para las categorias existentes
+  */
+
+
+.contenido{
+    background-color: #ddd;
+}
+
+.categorias{
+    display: flex;
+}
+
+.categorias li{
+    list-style: none;
+    padding: 0 10px;
+}
+
+.categorias li:not(:last-child) {
+    border-right: 3px solid rgba(255, 255, 255, 0.5);
+  }
+
+.categorias li:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.categorias a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color : #fff;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px;
+    list-style: none;
+}
+
+/*
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  - - - - - - - - - - - - Pagina principal - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - PRODUCTOS - - - - - - - - - - - - - - - -    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  
+      En este apartado se definen los estilos para lOS PRODUCTOS
+  */
+
+.grid-productos {
+    padding: 3em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding-bottom: 7em;
+
+
+}
+
+.producto {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.producto h2 {
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.producto p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 600px) {
+    .producto img {
+        height: 150px;
+    }
+}
+
+main.scroll {
+    flex: 1;
+    position: relative;
+    overflow: visible; 
+}
+
+footer.responsivo {
+    background: #222;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.botonesProducto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.botonesProducto li {
+    list-style: none;
+}
+
+.botonesProducto li a {
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.botonesProducto li a:hover {
+    background-color: darkorange;
+}
+
+
+@media (max-width: 600px) {
+    .botonesProducto {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .botonesProducto li a {
+        width: 80%; 
+    }
+}
+
+
+
+
+/*
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  - - - - - - - - - - - - Pagina principal - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - DETALLE PROFUCTO - - - - - - - - - - - - - - - -    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  
+      En este apartado se definen los estilos para EL DETALLE DE UN PRODUCTO
+  */
+
+  .separador{
+    padding-bottom: 5em;
+}
+
+/* Contenedor principal */
+.detalle-producto {
+    max-width: 1250px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 3em;
+    transition: all 0.3s ease;
+    
+}
+
+/* Título del producto */
+.detalle-producto h1 {
+    font-size: 2rem;
+    color: #111827;
+    margin-bottom: 20px;
+    text-align: center;
+    float: left;
+    margin-right: 50%;
+    
+}
+
+/* Imagen */
+.detalle-producto img {
+    display: block;
+    max-width:75%;
+    width: 75%;      
+    height: 75%;    
+    object-fit: cover; 
+    border-radius: 8px;
+    height: auto;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    float: left;
+
+}
+
+.detalle-producto img:hover {
+    transform: scale(1.05);
+}
+
+/* Precio y descripción */
+.detalle-producto p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    float: right;
+    
+}
+
+.detalle-producto p strong {
+    color: #1f2937;
+
+} 
+
+.descripcion{
+    padding-top: 1em;
+    float: left;
+    margin-right: 15em;
+    color: #1f2937;
+}
+
+.botones{
+    float: right;
+    padding-top: 1em;
+    padding-right: 1em;
+}
+
+/* Botón de regreso */
+.detalle-producto a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+
+}
+
+.detalle-producto a:hover {
+    background-color:  rgba(255, 166, 0, 0.438);;
+}
+
+.botonesDemo {
+    padding-right: 2.5em;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .detalle-producto {
+        padding: 20px;
+    }
+
+    .detalle-producto h1 {
+        font-size: 1.5rem;
+    }
+
+    .detalle-producto p {
+        font-size: 1rem;
+    }
+}
+
+.color{
+    color:#1f2937;
+}
+
+a .back{
+    float: left;
+    
+}
+
+.seleccion{
+    float: right;
+    padding-right: 2.7em;
+    
+}
+
+.seleccion li{
+    display: flex;
+    text-decoration: none;
+    list-style: none;   
+    font-style: none;
+    line-height: 3em;
+    float: right;
+    padding-right: 1.5em;
+
+
+}
+
+.padding{
+    padding-top: 5em;
+    
+}
+
+.padding li{
+    padding-right: 3em;
+    float: center;
+    
+    
+}
+
+
+.subtitulo{
+    text-align: center;
+}
+
+.subtitulo strong{
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 2em;
+    font-size: 25px;
+}
+
+.tabla-responsive {
+    overflow-x: auto;
+}
+
+
+.tabla-responsive table {
+    margin-top: 7em;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    border-spacing: 10px 20px;
+    background-color: #FFF;
+    border-radius: 20px;
+    color: #000;
+    padding: 10px;
+    font-size: 12px;
+    padding:  2em;
+    margin-bottom: 13em;
+    
+}
+
+.tabla-responsive th {
+    background-color: #444;
+    color: #fff;
+    padding: 12px;
+    border: 2px solid #FFF;
+    border-radius: 10px;
+}
+
+.tabla-responsive tr {
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.tabla-responsive td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 10px;
+}
+
+.bodyCarrito{
+    background-color: #ddd;
+}
+
+.total{
+    background-color: #444;
+    color: #fff;
+    padding: 12px;
+    border: 2px solid #FFF;
+    border-radius: 10px;
+    padding-bottom: 3em;
+}
+
+.botonesCarrito {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.botonesCarrito li {
+    list-style: none;
+    margin-left: 3em;
+    margin-right: 3em;
+    
+}
+
+.botonesCarrito li a {
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.botonesCarrito li a:hover {
+    background-color: darkorange;
+}
+
+.botonesCarrito button {
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid orange;
+}
+
+.botonesCarrito button:hover {
+    background-color: darkorange;
+}
+
+@media (max-width: 600px) {
+    .botonesCarrito {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .botonesCarrito li a {
+        width: 80%; 
+    }
+}
+
+.tablacarrito{
+    background-color: #ddd;
+
+}
+
+.tablacarrito td{
+
+    border: 1px solid #FFF;
+}
+
+.alerta{
+    padding-top: 10px;
+    background-color: #222;
+    color: #FFF;
+    text-align: right;
+    padding-right: 12em;
+    font-size: 10px;
+}
+
+.mensaje{
+    border: 1px solid #FFF;
+    background-color: #333;
+    border-radius: 50px;
+    color: #FFF;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.5em;
+    margin-top: 5em;
+    margin-left: 10em;
+    margin-right: 10em;
+    margin-bottom: 2em;
+}
+
+.mensaje h2{
+    padding:10px;
+    padding-bottom: 1em;
+}
+
+.mensaje p{
+    padding:10px;
+}
+
+.botonpago {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+
+.botonpago button {
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid orange;
+}
+
+.botonpago button:hover {
+    background-color: darkorange;
+}
+
+@media (max-width: 600px) {
+    .botonpago {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .botonpago button {
+        width: 80%; 
+    }
+}
+
+
+.tabla-responsive input{
+    border: 1px solid #FFF;
+    width: 100%;
+}
+
+
+/*
+TARJETAS
+*/
+
+.tarjetas{
+    text-align: center;
+    list-style: none;
+    margin-top: 3em;
+    color: #222;
+    padding-bottom: 1em;
+}
+
+.tarjetas input{
+    margin-right: 3em;
+}
+
+
+
+.tarjetas li{
+    
+    margin-left: 30em;
+    margin-right: 30em;
+    background-color: #FFF;
+    border-radius: 30px;
+    padding: 1em;
+}
+
+.botonTarjeta {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-bottom: 3em;
+    margin-top: 3em;
+}
+
+
+.botonTarjeta button {
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid orange;
+}
+
+.botonTarjeta button:hover {
+    background-color: darkorange;
+}
+
+.botonTarjeta a {
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid orange;
+}
+
+.botonTarjeta a:hover {
+    background-color: darkorange;
+}
+
+@media (max-width: 600px) {
+    .botonTarjeta {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .botonTarjeta button {
+        width: 80%; 
+    }
+}
+
+.botonTarjetaAgregar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+    margin-left: 3em;
+    margin-right: 3em;
+    padding-bottom: 8em;
+    margin-top: 3em;
+}
+
+
+.botonTarjetaAgregar a {
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid orange;
+}
+
+.botonTarjetaAgregar a:hover {
+    background-color: darkorange;
+}
+
+@media (max-width: 600px) {
+    .botonTarjetaAgregar {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .botonTarjetaAgregar button {
+        width: 80%; 
+    }
+}
+
+
+.grid-categorias {
+    padding: 3em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    
+}
+
+.categoria {
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.categoria:hover {
+    transform: translateY(-5px);
+}
+
+.categoria h2 {
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+    color: #FFF;
+}
+
+.botonesCategoria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.botonesCategoria li {
+    list-style: none;
+}
+
+.botonesCategoria li a {
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: teal;
+    color: white;
+    text-align: center;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+}
+
+.botonesCategoria li a:hover {
+    background-color: darkcyan;
+}
+
+
+.contenedorCategorias {
+    margin-top: 3em;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    border-spacing: 10px 20px;
+    background-color: #FFF;
+    border-radius: 20px;
+    color: #000;
+    padding: 10px;
+    
+}
+
+.grid-biblioteca {
+    padding: 3em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding-bottom: 7em;
+}
+
+
+.mensajeBiblioteca {
+    background-color: #333;
+    border-radius: 50px;
+    color: #FFF;
+    padding: 20px 40px;
+    font-size: 1.5em;
+    text-align: center;
+    margin-left: 10em;
+    margin-right: 10em;
+}
+
+.mensajeBiblioteca h2{
+    padding:10px;
+    padding-bottom: 1em;
+}
+
+.mensajeBiblioteca p{
+    padding:10px;
+}

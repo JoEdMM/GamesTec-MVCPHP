@@ -1,0 +1,577 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+}
+
+.header-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 10px 30px;
+    background: #222;
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    width: 60px;
+}
+
+.logo-container h1 {
+    font-size: 20px;
+    color: white;
+}
+
+.admin {
+    grid-column: 2 / 3; /* Segunda columna centrada */
+    text-align: center;
+}
+
+.admin h2 {
+    margin: 0;
+    font-size: 22px;
+    color: white;
+}
+
+nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 70%;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+/* Asegura que html y body ocupen todo el alto */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* El contenido principal debe expandirse para empujar el footer */
+main {
+    flex: 1;
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    height: 100%;
+    padding: 40px;
+}
+
+.opciones {
+    background-color: #222;
+    color: black;
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.opciones:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.opciones a {
+    color: #FFF;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+footer {
+    background: #222;
+    padding: 20px;
+    text-align: center;
+    
+
+    
+}
+
+
+footer p {
+    padding-top: 1;
+    margin-top: 10px;
+    color: #bbb;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/*--------------------------------------------------------------------------------------  
+--------------------------------------------------------------------------------------
+-   css Mostrar.php
+-------------------------------------------------------------------------------------- 
+----------------------------------------------------------------------------------------*/
+
+.subtitulo{
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.subtitulo strong{
+    padding: 10px 70px;
+    margin: 5px;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    font-size: 30px;
+}
+
+.tabla-responsive {
+    overflow-x: auto;
+}
+
+main.scroll {
+    flex: 1;
+    position: relative;
+    overflow: visible; 
+    height: 500px;
+    padding: 3em;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    background-color: #222;
+    border-radius: 20px;
+    color: #000;
+    padding: 10px;
+    font-size: 11px;
+    padding:  2em;
+    margin-bottom: 10em;
+    
+}
+
+thead th {
+    background-color: #444;
+    color: #fff;
+    padding: 12px;
+    border: 5px solid #222;
+    border-radius: 10px;
+}
+
+tbody tr {
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+tbody td {
+    text-align: center;
+    padding: 10px;
+    border: 5px solid #222;
+    border-radius: 10px;
+}
+
+
+
+tbody tr td img {
+    max-width: 60px;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    thead {
+        display: none;
+    }
+
+    table, tbody, tr, td {
+        display: block;
+        width: 100%;
+        padding-left: 15px;
+    padding-right: 15px;
+    /* Tamaño de fuente opcional */
+    font-size: 16px;
+    }
+
+    tbody tr {
+        margin-bottom: 15px;
+        border-radius: 20px;
+        padding: 10px;
+        background-color: #fff;
+    }
+
+    tbody td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+    
+}
+.botones-inferiores {
+    text-align: center;
+}
+
+.botones-inferiores button {
+    padding: 10px 20px;
+    margin: 5px 40px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    
+    
+}
+
+.botones-inferiores input[type="submit"] {
+    padding: 10px 20px;
+    margin: 5px 40px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.botones-inferiores button:hover {
+    background-color: #555;
+}
+
+.botones-inferiores input[type="submit"]:hover {
+    background-color: #555;
+}
+footer.responsivo {
+    background: #222;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+
+/* --------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+css Visualizar.php
+-------------------------------------------------------------------------------------- 
+----------------------------------------------------------------------------------------*/
+
+
+.separador{
+    padding-bottom: 5em;
+}
+
+/* Contenedor principal */
+.visualizar-contenido {
+    max-width: 1250px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 3em;
+    transition: all 0.3s ease;
+    
+}
+
+/* Título del producto */
+.visualizar-contenido h1 {
+    font-size: 2rem;
+    color: #111827;
+    margin-bottom: 20px;
+    text-align: center;
+    float: left;
+    margin-right: 50%;
+    
+}
+
+/* Imagen */
+.visualizar-contenido img {
+    display: block;
+    max-width:75%;
+    width: 75%;      
+    height: 75%;    
+    object-fit: cover; 
+    border-radius: 8px;
+    height: auto;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    float: left;
+
+}
+
+.visualizar-contenido img:hover {
+    transform: scale(1.05);
+}
+
+/* Precio y descripción */
+.visualizar-contenido p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    float: right;
+    
+}
+
+.visualizar-contenido p strong {
+    color: #1f2937;
+
+} 
+
+.descripcion{
+    padding-top: 1em;
+    float: left;
+    margin-right: 15em;
+    color: #1f2937;
+}
+
+.botones{
+    float: right;
+    padding-top: 1em;
+    padding-right: 1em;
+}
+
+/* Botón de regreso */
+.visualizar-contenido a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+
+}
+
+.visualizar-contenido a:hover {
+    background-color:  rgba(255, 166, 0, 0.438);;
+}
+
+.botonesDemo {
+    padding-right: 2.5em;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .visualizar-contenido {
+        padding: 20px;
+    }
+
+    .visualizar-contenido h1 {
+        font-size: 1.5rem;
+    }
+
+    .visualizar-contenido p {
+        font-size: 1rem;
+    }
+}
+
+.color{
+    color:#1f2937;
+}
+
+a .back{
+    float: left;
+    
+}
+
+.seleccion{
+    float: right;
+    padding-right: 2.7em;
+    
+}
+
+.seleccion li{
+    display: flex;
+    text-decoration: none;
+    list-style: none;   
+    font-style: none;
+    line-height: 3em;
+    float: right;
+    padding-right: 1.5em;
+
+
+}
+
+.padding{
+    padding-top: 5em;
+    
+}
+
+.padding li{
+    padding-right: 3em;
+    float: center;
+    
+    
+}
+
+/*
+ingresar.php
+*/
+.formulario{
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-bottom: 8em;
+    
+
+}
+
+.tablaFormulario {
+    margin: 0 auto;
+    background-color: #222;
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    color: black;
+}
+
+
+.tablaFormulario td {
+    padding: 12px 15px;
+    font-size: 1em;
+}
+
+.tablaFormulario tr {
+    padding: 12px 15px;
+    font-size: 16px;
+    background-color: #222;
+}
+
+.tablaFormulario td.cambiocolor {
+    background-color: #444;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    width: 150px;
+    
+}
+
+.tablaFormulario  td input {
+    border: none;
+    background-color: #FFF;
+    color: #111827;
+    border-radius: 8px;
+    padding: 8px;
+    width: 100%;
+
+}
+
+.tablaFormulario td input[readonly] {
+    background-color: #d1d5db;
+}
+
+.mostrarImagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.mostrarImagen img {          
+    max-width: 100%;    
+    height: auto;         
+    object-fit: contain;  
+    border-radius: 8px;   
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); 
+}
+
+/*
+confirmación.php
+*/
+
+.popup{
+    background-color: #222;
+    color: white;
+    width: 400px;
+    height: 200px;
+    margin: 20px auto;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.popup h2{
+    color: white;
+    font: bold 20px Arial;
+    padding: 5px 10px;
+    padding-top: 3em;
+    float: center;
+    border-radius: 10px;
+    margin-bottom: 2em;
+}
+
+.popup button{
+    background-color: #A7A7A7;
+    color: white;
+    padding: 5px 30px;
+    border: 1px solid #A7A7A7;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.popup button:hover{
+    background-color: #C5C5C5;
+    color: white;
+}
+/*
+/*CAMBIO DE COLOR ENTRE TABLA
+	.cambiolineas table tr:nth-child(odd) {
+        background-color: orange; 
+    }
+
+    .cambiolineas table tr:nth-child(even) {
+        background-color: #CFD4EA; 
+    }
+*/
